@@ -6,7 +6,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Button, ButtonGroup, Container } from '@mui/material';
-
 import { styled } from '@mui/material/styles';
 
 const Div = styled('div')(({ theme }) => ({
@@ -15,13 +14,10 @@ const Div = styled('div')(({ theme }) => ({
   padding: theme.spacing(2),
 }));
 
-
-
 export default function Products() {
     return (
         <>
       <Container maxWidth="sm">
-
       <Div>{"STORE"}</Div>
       <Button variant="text">Add Product</Button>
       <TableContainer component={Paper}>
