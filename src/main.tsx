@@ -1,27 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import ErrorPage from "./components/error-page";
-import Contact from './routes/Contact';
-import Root from './routes/Root';
+import { NavBar } from './components/NavBar';
+import ErrorPage from './error-page';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <NavBar />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "contacts/:contactId",
-        element: <Contact />,
-      },
-    ],
+
   },
 ]); 
 
