@@ -1,21 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { NavBar } from './components/NavBar';
-import ErrorPage from './error-page';
+import { BrowserRouter} from 'react-router-dom';
+import './index.css';
+import { App } from './App';
 
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <NavBar />,
-    errorElement: <ErrorPage />,
-
-  },
-]); 
-
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render (
+const root =  ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+root.render (
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );

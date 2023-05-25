@@ -1,8 +1,26 @@
+import { useNavigate } from "react-router-dom";
 
-export function About() {
+export const About = () => {
+    const navigate = useNavigate();
+
     return (
-        <div>
-            <h1>Estas en About</h1>
-        </div>
+        <>
+            <div className="container">
+                <button className="btn" onClick={() => navigate(-1)}>
+                    Go Back 
+                </button>
+                <div className="title">
+                    <h1>Hola, estas en About!</h1>
+                </div>
+                <div className="about-container">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+                        eos tenetur beatae nihil dolorum possimus voluptate esse voluptatibus,
+                        aliquid ratione facere enim eveniet modi necessitatibus quas
+                        asperiores pariatur, amet velit?
+                    </p>
+                </div>
+            </div>
+        </>
     );
 }
